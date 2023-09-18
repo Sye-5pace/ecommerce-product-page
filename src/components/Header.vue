@@ -38,7 +38,8 @@
                 <h3 class="font-bold">Cart</h3>
             </div>
             <div class="flex flex-col items-center justify-center gap-y-5" v-if="cartItems.length > 0">
-                <div class="flex items-center gap-6" v-for="(item ,index) in cartItems" :key="index">
+                <div class="flex items-center gap-6" v-for="(item,index) in cartItems" :key="index">
+                    {{ console.log(item) }}
                     <img src="../assets/image-product-1-thumbnail.jpg" class="w-[3.125rem] rounded-[0.25rem]"/>
                     <div class="text-palesky font-normal text-[1rem]">
                         <h1> Fall Limited Edition </h1>
