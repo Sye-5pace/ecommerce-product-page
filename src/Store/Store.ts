@@ -1,14 +1,21 @@
 import { defineStore } from 'pinia'
 
+interface ProductType{
+    image: string,
+    name: string,
+    price: number
+    quantity: number
+}
+
 export const useProductStore = defineStore('cart' ,{
-    state: () => ({
+    state: (): { cartItems: ProductType[]} => ({
         cartItems:[]
     }),
     actions: {
-        addToCart(product) {
+        addToCart(product : ProductType) : void{
             this.cartItems.push(product)
         },
-        removeFromCart(index) {
+        removeFromCart(index: number): void {
             this.cartItems.splice(index,1)
         }
     }

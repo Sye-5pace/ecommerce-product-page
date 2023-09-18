@@ -17,7 +17,7 @@
         imageRef: productImage1
     })
 
-    const imageUpdater = (imageURL) => {
+    const imageUpdater = (imageURL: string) => {
         state.imageRef = imageURL;
         console.log(state.imageRef);
     }
@@ -31,8 +31,8 @@
         productImage4
     ]
 
-    const currentImageIndex = ref(0);
-    const navigateImage = (direction) => {
+    const currentImageIndex = ref<number>(0);
+    const navigateImage = (direction: string) => {
         if(direction === 'prev'){
             currentImageIndex.value = ( currentImageIndex.value -1 + imgList.length) % imgList.length; 
         }else if(direction === 'next'){

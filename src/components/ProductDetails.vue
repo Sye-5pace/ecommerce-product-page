@@ -5,7 +5,7 @@
     const productStore = useProductStore();
     const { cartItems, addToCart } = productStore
     
-    const count = ref(0)
+    const count = ref<number>(0)
 
     const addItemToCart = () => {
         const item = {
