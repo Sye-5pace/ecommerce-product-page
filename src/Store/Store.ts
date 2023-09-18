@@ -15,7 +15,7 @@ export const useProductStore = defineStore('cart' ,{
         addToCart(product : ProductType) : void{
             this.cartItems.push(product)
         },
-        removeFromCart(index: number): void {
+        removeFromCart(index: number):void {
             this.cartItems.splice(index,1)
         }
     }
